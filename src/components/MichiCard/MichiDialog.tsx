@@ -25,7 +25,6 @@ import { shareMichi } from "@/adapters/shareMichi";
 import { usePostVoteMutation } from "@/api/catImages/catImagesApi";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import { theme } from "@/theme/theme";
 
 interface MichiDialogProps {
   michiData: getCatImagesResponnse[number] & michiDataType;
@@ -33,7 +32,7 @@ interface MichiDialogProps {
 
 const MichiDialog: FC<MichiDialogProps> = ({ michiData }) => {
   const breeds = michiData.breeds[0];
-  const [postLike, { data }] = usePostVoteMutation();
+  const [postLike] = usePostVoteMutation();
 
   const onMenuClickHandler = (socialNetwork: "whatsapp" | "facebook") => {
     shareMichi(socialNetwork, michiData.url, `Mira este michi: ${breeds.name}`);

@@ -5,7 +5,6 @@ import { useGetCatImagesQuery } from "@/api/catImages/catImagesApi";
 import TDialog from "@/components/common/TDialog";
 import MichiCard from "@/components/MichiCard/MichiCard";
 
-import UserHeader from "@/components/UserHeader/UserHeader";
 import { Container, Grid2, Typography } from "@mui/material";
 import {
   getCatImagesResponnse,
@@ -43,7 +42,7 @@ const Page = () => {
     <>
       <Container
         maxWidth="lg"
-        sx={(theme) => ({
+        sx={() => ({
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

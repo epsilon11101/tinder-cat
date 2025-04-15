@@ -2,7 +2,6 @@
 import {
   Card,
   CardActionArea,
-  CardActionAreaProps,
   CardActions,
   CardContent,
   CardMedia,
@@ -50,7 +49,7 @@ const MichiCard: FC<MichiCardProps> = ({
   const fakeMichiAge = useMemo(() => getAge(), []);
   const fakeMichiGender = useMemo(() => getGender(), []);
   const bread = michiData.breeds[0];
-  const [postLike, { data }] = usePostVoteMutation();
+  const [postLike] = usePostVoteMutation();
 
   const onMenuClickHandler = (
     socialNetwork: "whatsapp" | "facebook",

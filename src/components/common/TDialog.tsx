@@ -24,7 +24,7 @@ interface TDialogProps extends DialogProps {
   title?: string;
   setOpen: Dispatch<SetStateAction<boolean>>;
   actions?: ReactNode;
-  withIcon?: Boolean;
+  withIcon?: boolean;
   icon?: ReactNode;
   tDialogSlotProps?: slotPropsType;
   onCloseActions?: () => void;

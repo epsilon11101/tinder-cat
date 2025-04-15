@@ -7,7 +7,7 @@ import { Container, Grid2 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Masonry from "@mui/lab/Masonry";
 
-const page = () => {
+const Page = () => {
   const [items, setItems] = useState<getCatVotesResponse[]>([]);
   const { data } = useGetVotesQuery();
 
@@ -25,7 +25,7 @@ const page = () => {
   return (
     <Container
       maxWidth="lg"
-      sx={(theme) => ({
+      sx={() => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -57,4 +57,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
